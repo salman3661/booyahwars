@@ -1,6 +1,16 @@
 {
   "name": "booyahwars",
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/AeroxApiAdmin/:path*",
+      "destination": "/api/index?path=AeroxApiAdmin/:path*"
+    },
+    {
+      "source": "/:file*.php",
+      "destination": "/api/index?path=:file*.php"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*).apk",
